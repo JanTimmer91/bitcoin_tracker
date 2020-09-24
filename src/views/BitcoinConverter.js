@@ -2,26 +2,12 @@ import React, {Component, Fragment} from 'react';
 import styled from 'styled-components';
 import {Button, Col, Row} from 'react-bootstrap';
 import axios from "axios";
-import RateInfoCard from "../components/Cards/RateInfoCard";
 
 const BigHeader = styled.div`
     margin: 26px 0px 0px 42px;
     font-weight: 300;
     font-size: 22px;
     display:inline-block;
-`;
-
-const DropDownButton = styled.button`
-
-    border-radius: .25rem,
-    margin-top: 6px;
-    background-color: #55acee;
-        position:relative
-    color: white;
-        :hover{
-        opacity: 0.9
-    }
-    
 `;
 
 const DropDownContainer = styled.div`
@@ -213,7 +199,7 @@ class BitcoinConverter extends Component {
                                         type='number'
                                         onChange={this.handleChange}
                                     />
-                                    <div style={{color: "#007BFF", display: "inline-block"}}>
+                                    <div style={{color: "#007BFF", display: "inline-block", marginLeft: "10px"}}>
                                         <b>{this.state.currency}</b></div>
                                     <p>Enter amount</p>
                                 </form>
