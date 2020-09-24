@@ -48,7 +48,6 @@ class Dashboard extends Component {
             .then(data => {
                 this.setState({exchangeRateData: data})
             });
-
         document.body.style.backgroundColor = "rgba(203,203,210,.15)"
     }
 

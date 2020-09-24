@@ -5,8 +5,8 @@ export const routes = [
         cName: 'dropdown-link'
     },
     {
-        title: 'Bitcoin Diagram',
-        path: '/bitcoinDiagram',
+        title: 'Bitcoin Converter',
+        path: '/bitcoinConverter',
         cName: 'dropdown-link'
     },
 ];

@@ -10,7 +10,7 @@ function App() {
             <Menu/>
             <Switch>
                 <Route path='/' exact component={Dashboard}/>
-                <Route path='/bitcoinDiagram' component={BitcoinConverter}/>
+                <Route path='/bitcoinConverter' component={BitcoinConverter}/>
             </Switch>
         </BrowserRouter>
     );

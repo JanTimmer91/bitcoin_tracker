@@ -77,6 +77,7 @@ const InputContainer = styled.div`
     background-color: white;
     padding: 32px 16px 0px 16px;
     margin: 0px 0px 0px 0px;
+    display: "inline-block"
     :hover {
         box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
         cursor: pointer;
@@ -212,9 +213,10 @@ class BitcoinConverter extends Component {
                                         type='number'
                                         onChange={this.handleChange}
                                     />
+                                    <div style={{color: "#007BFF", display: "inline-block"}}>
+                                        <b>{this.state.currency}</b></div>
                                     <p>Enter amount</p>
                                 </form>
-                                <div style={{color: "#55acee"}}><b>{this.state.currency}</b></div>
                             </InputContainer>
                         </Col>
                     </Row>
@@ -262,7 +264,7 @@ class BitcoinConverter extends Component {
                         </Col>
                         <Col lg={3}>
                             <CalculationResultContainer>
-                                {this.state.calculationResult ? this.state.calculationResult :
+                                {this.state.calculationResult ? <div>{this.state.calculationResult} BTC</div> :
                                     <i>Result will be displayed here</i>}
                             </CalculationResultContainer>
                         </Col>

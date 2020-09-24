@@ -64,9 +64,10 @@ class Menu extends Component {
         super(props);
         this.state = {
             showMenu: false,
-            pageTitle: '',
+            navbarTitle: 'Menu',
         }
     }
+
 
 
     render() {
@@ -86,7 +87,7 @@ class Menu extends Component {
                                             className={item.cName}
                                             to={item.path}
                                         >
-                                            <MenuItem onClick={() => this.setState({pageTitle: item.title})}>
+                                            <MenuItem>
                                                 {item.title}
                                             </MenuItem>
 
@@ -96,7 +97,7 @@ class Menu extends Component {
                             })}
                         </div>
                     </MenuContainer> : null}
-                <PageTitle>{this.state.pageTitle === '' ? "Dashboard" : this.state.pageTitle}</PageTitle>
+                <PageTitle>{this.state.navbarTitle === '' ? "Dashboard" : this.state.navbarTitle}</PageTitle>
             </NavTop>
         );
     }
