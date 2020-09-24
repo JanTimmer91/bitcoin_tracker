@@ -1,7 +1,7 @@
 import React from 'react';
 import Dashboard from "./views/Dashboard";
 import Menu from "./components/Menu/Menu";
-import BitcoinDiagram from "./views/BitcoinDiagram";
+import BitcoinConverter from "./views/BitcoinConverter";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
             <Menu/>
             <Switch>
                 <Route path='/' exact component={Dashboard}/>
-                <Route path='/bitcoinDiagram' component={BitcoinDiagram}/>
+                <Route path='/bitcoinDiagram' component={BitcoinConverter}/>
             </Switch>
         </BrowserRouter>
     );

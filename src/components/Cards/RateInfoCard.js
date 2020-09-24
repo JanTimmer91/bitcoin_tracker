@@ -39,7 +39,7 @@ const BitcoinBuyRateContainer = styled.div`
     font-weight: 200;
 `;
 
-export class InfoCard extends Component {
+export class RateInfoCard extends Component {
     render() {
         return (
             <InfoCardContainer>
@@ -54,8 +54,10 @@ export class InfoCard extends Component {
                     </Row>
                     <Row>
                         <Col>
-                            <BitcoinSellRateContainer>Sell: <b>{this.props.bitcoinSellRate}</b> BTC</BitcoinSellRateContainer>
-                            <BitcoinBuyRateContainer>Buy: <b>{this.props.bitcoinBuyRate}</b> BTC</BitcoinBuyRateContainer>
+                            <BitcoinSellRateContainer>Sell: <b>{this.props.bitcoinSellRate}</b> {this.props.currencyIcon}
+                            </BitcoinSellRateContainer>
+                            <BitcoinBuyRateContainer>Buy: <b>{this.props.bitcoinBuyRate}</b> {this.props.currencyIcon}
+                            </BitcoinBuyRateContainer>
                         </Col>
                     </Row>
                 </div>
@@ -64,10 +66,10 @@ export class InfoCard extends Component {
     }
 }
 
-InfoCard.propTypes = {
+RateInfoCard.propTypes = {
     currencyIcon: PropTypes.string,
     currencyLabel: PropTypes.string,
     bitcoinSellRate: PropTypes.number,
     bitcoinBuyRate: PropTypes.number,
 };
-export default InfoCard;
+export default RateInfoCard;

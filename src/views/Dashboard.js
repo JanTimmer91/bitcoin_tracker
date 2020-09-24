@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from "axios";
 import {Button} from 'react-bootstrap';
 import {Container, Row, Col} from "react-bootstrap";
-import InfoCard from "../components/InfoCard/InfoCard";
+import RateInfoCard from "../components/Cards/RateInfoCard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from "prop-types";
 
@@ -82,10 +82,11 @@ class Dashboard extends Component {
                                             {Object.keys(this.state.exchangeRateData).map((key) => (
                                                 key == currency ?
                                                     <div className="container">
-                                                        <InfoCard currencyIcon={this.state.exchangeRateData[key].symbol}
-                                                                  currencyLabel={key}
-                                                                  bitcoinSellRate={this.state.exchangeRateData[key].buy}
-                                                                  bitcoinBuyRate={this.state.exchangeRateData[key].sell}/>
+                                                        <RateInfoCard
+                                                            currencyIcon={this.state.exchangeRateData[key].symbol}
+                                                            currencyLabel={key}
+                                                            bitcoinSellRate={this.state.exchangeRateData[key].buy}
+                                                            bitcoinBuyRate={this.state.exchangeRateData[key].sell}/>
                                                     </div> : null
                                             ))}
                                         </div>
@@ -100,7 +101,7 @@ class Dashboard extends Component {
     }
 }
 
-InfoCard.propTypes = {
+RateInfoCard.propTypes = {
     symbol: PropTypes.string,
     buy: PropTypes.number,
     sell: PropTypes.number,
